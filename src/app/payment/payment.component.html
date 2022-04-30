@@ -1,0 +1,150 @@
+
+<div class="container" style="margin-bottom: 25px;">
+    <div class="outer">
+    <div class="row">
+      <div class="col-sm-6">
+        
+    <div class="form-address">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+
+        <div class="form-group">
+          <label>Line 1</label>
+          <input type="text" class="form-control" formControlName="line1">
+          <div *ngIf="getControl.line1.touched && getControl.line1.invalid" class="text-danger">
+            <div *ngIf="getControl.line1.errors?.required">Address is required.</div>
+            <div *ngIf="getControl.line1.errors?.minlength">Minimum 4 character are required.</div>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label>Line 2</label>
+          <input type="text" class="form-control" formControlName="line2" >
+          <div *ngIf="getControl.line2.touched && getControl.line2.invalid" class="text-danger">
+            <div *ngIf="getControl.line2.errors?.required">Address is required.</div>
+            <div *ngIf="getControl.line2.errors?.email">Address seems invalid.</div>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" class="form-control" formControlName="city">
+          <div *ngIf="getControl.city.touched && getControl.city.invalid" class="text-danger">
+            <div *ngIf="getControl.city.errors?.required">City is required.</div>
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label>State</label>
+          <input type="text" class="form-control" formControlName="state">
+          <div *ngIf="getControl.state.touched && getControl.state.invalid" class="text-danger">
+            <div *ngIf="getControl.state.errors?.required">State is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Country</label>
+          <input type="text" class="form-control" formControlName="country">
+          <div *ngIf="getControl.country.touched && getControl.country.invalid" class="text-danger">
+            <div *ngIf="getControl.country.errors?.required">Countryis required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Pin Code</label>
+          <input type="text" class="form-control" formControlName="pincode" >
+          <div *ngIf="getControl.pincode.touched && getControl.pincode.invalid" class="text-danger">
+            <div *ngIf="getControl.pincode.errors?.required">Pincode is required.</div>
+          </div>
+        </div>
+        <div class="d-flex" style="justify-content: end;max-width: 500px;margin-top: 25px;"><button class="btn btn-danger btn-block" type="submit">Continue</button></div>
+      </form>
+      </div>
+      </div>
+
+      <div class="col-sm-6">
+        <img id="image1" src="../../assets/handshake.png" alt="" style="max-width: 500px;height: 470px;border-radius: 24px;">
+      </div>
+      
+      </div>
+      </div>
+    
+
+      <div class="d-flex" style="justify-content: center;max-width: 100%;">
+        
+        <div class="select-date">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="text-center" style="font:Open Sans;margin-bottom: 30px;">{{phon}}</div>
+              <div class="text-center" style="font:Open Sans;margin-bottom: 30px;color: cornflowerblue;" (click)='changeAddr()'>Change Address</div>
+              <div class="text-center" style="font:Open Sans;font-size: 22px;font-weight: 600;margin-bottom: 30px;">When do You need the Service?</div>
+              <div class="d-flex" style="justify-content: center;max-width: 100%;">
+                <div>
+                  <mat-form-field>
+                    <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date & time" [(ngModel)]="myDatePicker">
+                    
+                    <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+                    <ngx-mat-datetime-picker #picker></ngx-mat-datetime-picker>
+                </mat-form-field>
+                </div>
+              </div>
+              <div class="d-flex" style="justify-content: center;max-width: 100%;margin-top: 30px;">
+                <button id="rzp-button1" (click)="pay()" style="color: white;background: #0090FF;border: 1px solid #0090FF;width: 150px;">Proceed to Pay</button>
+              </div>
+              <div class="d-flex" style="justify-content: center;max-width: 100%;margin-top: 30px;">
+                <button (click)="pay2()" style="color: white;background: #0090FF;border: 1px solid #0090FF;width: 150px;">Pay On Delivery</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+
+      
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Please Login To Proceed
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)='routeLogin()'>OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel2">Congrats Your Order Has Been Booked</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" routerLink='../home'></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h4 style="margin-top: 8px;">Service:     {{order[0]}}</h4>
+                  <h4 style="margin-top: 15px;">Price:       {{order[1]}}</h4>
+                  <h4 style="margin-top: 15px;">Slot:       {{myDatePicker}}</h4>
+                  <h4 style="margin-top: 15px;color: #0090FF;">Transaction ID:       {{receipt}}</h4>
+                  <br><br>
+                  <h4>Total Paid: {{order[1]}}</h4>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink='../service-nearby'>Buy More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+
+</div>

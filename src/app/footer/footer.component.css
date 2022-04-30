@@ -1,0 +1,55 @@
+.deskview {
+    display: block;
+}
+
+.mobview {
+    display: none;
+}
+
+@media only screen and (min-width:600px) {
+    .deskview {
+        display: block;
+    }
+
+    .mobview {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .deskview {
+        display: none;
+    }
+
+    .mobview {
+        display: block;
+    }
+}
+
+
+
+@media only screen and (min-width:600px) {
+.title{
+    font-size: 33px;
+    font-weight: 700;
+    font:  Open Sans;
+    color: black;
+}
+.bottom{
+    font: normal normal bold 23px/33px Open Sans;
+    color: black;
+}
+}
+
+@media only screen and (max-width: 600px) {
+    .title{
+        font-size: 15px;
+        font-weight: 700;
+        font:  Open Sans;
+        color: black;
+    }
+    .bottom{
+        font: normal normal bold 15px/15px Open Sans;
+        color: black;
+    }
+}

@@ -1,0 +1,69 @@
+<div class="container">
+<div class="email_part">
+    <div class="mb-3 mt-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" #emailSignup class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password:</label>
+      <input type="password" #passwordSignup class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <div ngif="!isSignedIn">
+        <button  type="submit" class="btn btn-primary" (click)="onSignUp(emailSignup.value,passwordSignup.value)">Sign Up</button>
+    </div>
+    
+    <button ngif="!isSignedIn" type="submit" class="btn btn-primary" (click)="onSignIn(emailSignup.value,passwordSignup.value)">Sign In</button>
+    <button ngif="isSignedIn" type="submit" class="btn btn-primary" (click)="logout()">Log Out</button>
+</div>
+
+<div class="row" style="margin-bottom: 100px;">
+  <div class="col-sm-12">
+    <div class="contain">
+      <div class="row d-flex align-items-center justify-content-center">
+        <form class="col-md-6">
+          <div class="card px-5 py-5">
+            <div class="form-input">
+              <input type="text" name="phoneNumber" class="form-control"
+                placeholder="Enter Phone Number"  [(ngModel)] = "phoneNumber" min="10">
+            </div>
+            <div id="sign-in-button"></div>
+            <button class="btn btn-success mt-4 signup" (click)="getOTP()"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Get OTP</button>
+            
+          </div>
+        </form>
+      </div>
+      </div>
+      <div class="d-flex" style="justify-content: center;">
+        <div class="spinner">
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+      </div>
+      </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Verify Otp</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="otp">
+          <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="config"></ng-otp-input>
+          <button class="btn btn-success mt-4" (click)="handleClick()" data-bs-dismiss="modal">Verify OTP</button>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+</div>
+ 

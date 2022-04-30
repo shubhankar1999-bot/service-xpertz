@@ -1,0 +1,122 @@
+<div class="deskview">
+<div class="d-flex" style="justify-content: space-around;">
+    <div class="d-flex" style="max-width: 240px;margin-left: 40px;">
+        <div style="margin-right: 25px;"><img src="../../assets/clock.png" alt=""></div>
+        <div class="top">Neat & Clean 7 days of the Week! 9am - 9pm</div>
+    </div>
+    <div class="d-flex" style="max-width: 300px;">
+        <div style="margin-right: 25px;"><img src="../../assets/arroba.png" alt=""></div>
+        <div class="top"><span style="color: black;">Email</span> servicexpertz@gmail.com</div>
+    </div>
+    <div class="d-flex" style="max-width: 300px;">
+        <div style="margin-right: 25px;"><img src="../../assets/social-network.png" alt=""></div>
+        <div>
+            <div class="top" style="color: black;">Get Social</div>
+            <div class="d-flex" style="margin-top: 8px;" >
+                <img style="margin-right: 18px;" src="../../assets/linkedin (4).png" alt="">
+                <img style="margin-right: 18px;" src="../../assets/facebook (2).png" alt="">
+                <img style="margin-right: 18px;" src="../../assets/youtube.png" alt="">
+                <img src="../../assets/instagram (4).png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="d-flex" style="max-width: 250px;">
+        <div style="margin-right: 25px;"><img src="../../assets/phone.png" alt=""></div>
+        <div class="top"><span style="color: black;">ContactUs</span> 123456789</div>
+    </div>
+</div>
+<div class="d-flex" style="margin-top: 50px;max-width: 100%;justify-content: space-between;">
+<img style="margin-left: 150px;" src="../../assets/icon.96c192a4.png" alt="" routerLink="home">
+<div class="d-flex" style="margin-left: 70px;margin-top: 25px;width: 100%;justify-content: space-between;">
+    <div class="bottom"  routerLink="../service-nearby">Services</div>
+    <div class="bottom" routerLink="../videos">Videos</div>
+    <div class="bottom"  routerLink="../blogs">Blog</div>
+    <div class="bottom" routerLink="../contact">Contact</div>
+    <div class="bottom"  routerLink="../about-us">About Us</div>
+    <div *ngIf="!auth.loggedIn()" class="bottom"  routerLink="../login">Login</div>
+    <div *ngIf="auth.loggedIn()" class="bottom"  (click)="logout1()">Log Out</div>
+    <div class="bottom"  routerLink="../careers">Careers</div>
+    <div class="bottom" ><i class="fa fa-search"></i></div>
+    <button class="book">Book a Call</button>
+</div>
+</div>
+</div>
+
+
+<!--MOBILE VIEW-->
+
+<div class="mobview">
+    <!-- Navbar -->
+    <div class="d-flex" style="justify-content: center;width: 100%;">
+        <div class="container-fluid">
+            <a class="navbar-brand me-2">
+              <img src="../../assets/icon.96c192a4.png" alt=""
+              alt=""
+              loading="lazy"
+              style="margin-top: -1px;width: 80px;height: 80px;" routerLink="home">
+            </a>
+          </div>
+          <div class="container-fluid" style="font-weight: bold;font-size: 18px;margin-top: 25px;">
+            Service Xpertz
+          </div>
+    <nav class="navbar navbar-expand-lg mobview" style="background: #FFFFFF;">
+      
+      <div class="container">
+        <!-- Navbar brand -->
+    
+        <!-- Toggle button -->
+        
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarButtonsExample"
+          aria-controls="navbarButtonsExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="margin-top: 10px;"
+        >
+          
+          <span class="navbar-toggler-icon" style="font-size: 28px;"><i class="fa fa-bars"></i></span>
+        </button>
+        <!-- Container wrapper -->
+      
+    
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarButtonsExample" style="width: 150px;">
+          <!-- Left links -->
+          <!-- Left links -->
+    
+          <div class="navbar-nav">
+            <div><a class="nav-link active bottom" style="margin-right: 30px;" routerLink="../service-nearby">Services <span><i class="fa fa-caret-down"></i></span></a></div>
+            
+            <div><a class="nav-link bottom" style="margin-right: 30px;" routerLink="../videos">Videos</a></div>
+            
+          
+          <div><a class="nav-link bottom" style="margin-right: 30px;" routerLink="../blogs">Blog</a></div>
+          
+          <div><a class="nav-link bottom" style="margin-right: 30px;" routerLink="../contact">Contact</a></div>
+          
+            <div><a class="nav-link bottom" style="margin-right: 30px;" routerLink="../about-us">About Us</a></div>
+              
+          <div *ngIf="!auth.loggedIn()"><a class="nav-link bottom" style="margin-right: 30px;" routerLink="../login">Login</a></div>
+
+          
+    <div *ngIf="auth.loggedIn()" class="nav-link bottom" style="margin-right: 30px;" (click)="logout1()">Log Out</div>
+          
+          <div><a class="nav-link bottom" style="margin-right: 30px;" routerLink="../careers">Careers</a></div>
+          
+          <div><a class="nav-link bottom" style="margin-right: 30px;"><i class="fa fa-search"></i></a></div>
+          </div>
+          
+          
+        </div>
+        <!-- Collapsible wrapper -->
+        
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    
+    </div>
+    <!-- Navbar -->
+    </div>

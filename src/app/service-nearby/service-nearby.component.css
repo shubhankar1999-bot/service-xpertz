@@ -1,0 +1,147 @@
+.deskview {
+    display: block;
+  }
+  
+  .mobview {
+    display: none;
+  }
+  
+  @media only screen and (min-width:600px) {
+    .deskview {
+        display: block;
+    }
+  
+    .mobview {
+        display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .deskview {
+        display: none;
+    }
+  
+    .mobview {
+        display: block;
+    }
+  }
+
+  @media only screen and (min-width:600px) {
+.banner{
+    height: 583px;
+    width: 100%;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),transparent url("../../assets/aboutUs.png") 0% 0% no-repeat padding-box ;
+    background-size:100% 583px;
+    
+    opacity: 1;
+    }
+    .title{
+        
+        font: normal normal bold 75px/102px Open Sans;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        }
+        .contact{
+            font: normal normal 600 60px/63px Open Sans;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        }
+.pop{
+    box-shadow: inset 0px 3px 6px #8383835E, 0px 3px 6px #777575B3;
+border-radius: 15px;
+opacity: 1;
+height: 280px;
+padding: 45px;
+}
+
+.subtitle{
+    text-align: left;
+font: normal normal 600 30px/33px Open Sans;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.title-oth{
+    text-align: left;
+font: normal normal 600 22px/23px Open Sans;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.box{
+    width: 308px;
+height: 162px;
+box-shadow: 0px 3px 6px #00000066;
+border: 1px solid #707070;
+border-radius: 42px;
+opacity: 1;
+background: #FFFFFF;
+}
+.project{
+    background: #0090FF;
+    height: 349px;
+}
+  }
+
+
+  /*-----------MOBILE VIEW-----------*/
+
+  @media only screen and (max-width:600px) {
+    .banner{
+        height: 300px;
+        width: 100%;
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),transparent url("../../assets/aboutUs.png") 0% 0% no-repeat padding-box ;
+        background-size:100% 300px;
+        
+        opacity: 1;
+        }
+        .title{
+            font: normal normal bold 55px/75px Open Sans;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+            }
+            .contact{
+                font: normal normal 600 60px/63px Open Sans;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+            }
+    .pop{
+        box-shadow: inset 0px 3px 6px #8383835E, 0px 3px 6px #777575B3;
+    border-radius: 15px;
+    opacity: 1;
+    
+    height: 280px;
+    padding: 45px;
+    }
+    .subtitle{
+        text-align: left;
+    font: normal normal 600 30px/33px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    }
+    .title-oth{
+        text-align: left;
+    font: normal normal 600 35px/36px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    }
+    .box{
+        width: 308px;
+    height: 162px;
+    box-shadow: 0px 3px 6px #00000066;
+    border: 1px solid #707070;
+    border-radius: 42px;
+    opacity: 1;
+    background: #FFFFFF;
+    }
+    .project{
+        background: #0090FF;
+        height: 349px;
+    }
+      }

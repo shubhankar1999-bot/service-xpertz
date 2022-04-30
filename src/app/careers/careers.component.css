@@ -1,0 +1,206 @@
+.deskview {
+    display: block;
+  }
+  
+  .mobview {
+    display: none;
+  }
+  
+  @media only screen and (min-width:600px) {
+    .deskview {
+        display: block;
+    }
+  
+    .mobview {
+        display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .deskview {
+        display: none;
+    }
+  
+    .mobview {
+        display: block;
+    }
+  }
+
+
+  @media only screen and (min-width:600px) {
+.banner{
+    height: 783px;
+    width: 100%;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),transparent url("../../assets/aboutUs.png") 0% 0% no-repeat padding-box ;
+    background-size:100% 793px;
+    
+    opacity: 1;
+    }
+    .title{
+        width: 600px;
+        height: 204px;
+        font: normal normal bold 75px/102px Open Sans;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        }
+        .contact{
+            font: normal normal 600 40px/40px Open Sans;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        }
+.pop{
+    box-shadow: inset 0px 3px 6px #8383835E, 0px 3px 6px #777575B3;
+border-radius: 15px;
+opacity: 1;
+
+height: 280px;
+padding: 45px;
+}
+.subtitle{
+    text-align: left;
+font: normal normal 600 30px/33px Open Sans;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.title-oth{
+    text-align: left;
+font: normal normal 600 63px/83px Open Sans;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.box{
+    width: 308px;
+height: 162px;
+box-shadow: 0px 3px 6px #00000066;
+border: 1px solid #707070;
+border-radius: 42px;
+opacity: 1;
+background: #FFFFFF;
+}
+.project{
+    background: #0090FF;
+    height: 349px;
+}
+.apply{
+    box-shadow: 0px 3px 6px #00000029;
+border: 0.5px solid #707070;
+border-radius: 23px;
+width: 480px;
+height: 110px;
+background: #0090FF;
+}
+.form-control{
+    background: #FFFFFF;
+box-shadow: 0px 27px 80px rgba(0, 0, 0, 0.07), 0px 8.13971px 24.1177px rgba(0, 0, 0, 0.0292197), 0px 3.38082px 10.0172px rgba(0, 0, 0, 0.00532872);
+border-radius: 50px;
+}
+.form-control2{
+    background: #FFFFFF;
+box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0395926), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0209855), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.00727637);
+border-radius: 25px;
+}
+.submit-info{
+    background: #0090FF;
+border: 1px solid #0090FF;
+box-sizing: border-box;
+box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0395926), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0209855), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.00727637);
+border-radius: 26px;
+height:39px;
+width: 129px;
+color: #FFFFFF;
+}
+  }
+
+  /*----------MOBILE VIEW----------*/
+
+  @media only screen and (max-width:600px) {
+    .banner{
+        height: 300px;
+        width: 100%;
+        background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),transparent url("../../assets/aboutUs.png") 0% 0% no-repeat padding-box ;
+        background-size:100% 300px;
+        
+        opacity: 1;
+        }
+        .title{
+            width: 600px;
+            height: 204px;
+            font: normal normal bold 75px/102px Open Sans;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+            }
+            .contact{
+                font: normal normal 600 22px/23px Open Sans;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+            }
+    .pop{
+        box-shadow: inset 0px 3px 6px #8383835E, 0px 3px 6px #777575B3;
+    border-radius: 15px;
+    opacity: 1;
+    
+    height: 280px;
+    padding: 45px;
+    }
+    .subtitle{
+        text-align: left;
+    font: normal normal 600 30px/33px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    }
+    .title-oth{
+        text-align: left;
+    font: normal normal 600 63px/83px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    }
+    .box{
+        width: 308px;
+    height: 162px;
+    box-shadow: 0px 3px 6px #00000066;
+    border: 1px solid #707070;
+    border-radius: 42px;
+    opacity: 1;
+    background: #FFFFFF;
+    }
+    .project{
+        background: #0090FF;
+        height: 349px;
+    }
+    .apply{
+        box-shadow: 0px 3px 6px #00000029;
+    border: 0.5px solid #707070;
+    border-radius: 23px;
+    width: 480px;
+    height: 110px;
+    background: #0090FF;
+    }
+    .form-control{
+        background: #FFFFFF;
+    box-shadow: 0px 27px 80px rgba(0, 0, 0, 0.07), 0px 8.13971px 24.1177px rgba(0, 0, 0, 0.0292197), 0px 3.38082px 10.0172px rgba(0, 0, 0, 0.00532872);
+    border-radius: 50px;
+    }
+    .form-control2{
+        background: #FFFFFF;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0395926), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0209855), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.00727637);
+    border-radius: 25px;
+    }
+    .submit-info{
+        background: #0090FF;
+    border: 1px solid #0090FF;
+    box-sizing: border-box;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0395926), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0209855), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.00727637);
+    border-radius: 26px;
+    height:39px;
+    width: 129px;
+    color: #FFFFFF;
+    }
+      }

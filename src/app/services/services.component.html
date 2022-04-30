@@ -1,0 +1,344 @@
+<div class="deskview">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="banner">
+                <div class="row">
+                    <div class="col" style="max-width: 25px;margin-left: 15px;">
+                        <div class="d-flex flex-column" style="align-items: center;width:25px;height: 80px;margin-top: 350px;opacity: 1;">
+                            <div><i class="fa fa-caret-right" style="color: white;transform: matrix(-1, 0, 0, 1, 0, 0);font-size: 90px;"></i></div> 
+                        </div>
+                    </div>
+                    <div class="col" style="max-width: fit-content;">
+                        <div class="title" style="margin-top: 120px;">AC Expert Near You</div> 
+                        <div>
+                            <ul class="subtitle" style="color: #F0F0F0;margin-left: 80px;font-size: 28px;margin-top: 20px;">
+                                <li class="subtitle" style="margin-bottom: 30px;color: #F0F0F0;font-size: 22px;">Doorstep repair within 90 mins</li>
+                                <li class="subtitle" style="margin-bottom: 30px;color: #F0F0F0;font-size: 22px;">Doorstep repair within 90 mins</li>
+                                <li class="subtitle" style="color: #F0F0F0;font-size: 22px;">Doorstep repair within 90 mins</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex" style="justify-content: end;max-width: 100%;">
+                        <div class="pop-up" style="margin-top: 160px;">
+                            <div *ngFor="let serv of subservices; index as i" class="re-direct" style="padding: 15px;margin-bottom: 25px;" routerLink="../payment" (click)="pay(serv.newService.price,serv.newService.id,serv.newService.name)">
+                                <div class="d-flex" style="justify-content: space-between;">
+                                    <div class="subtitle" style="color: white;">{{serv.newService.name}}</div>
+                                    <div><i class="fa fa-caret-right"></i></div>
+                                </div>
+                            </div>
+                            <div class="d-flex" style="justify-content: end;"><div style="color: white;">Need Help?</div></div>
+                        
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col" style="max-width: 100%;margin-right: 20px;">
+                    <div class="d-flex" style="justify-content: end;">
+                        <div class="d-flex flex-column" style="align-items: center;height: 80px;margin-top: 350px;opacity: 1;">
+                            <div><i class="fa fa-caret-left" style="color: white;transform: matrix(-1, 0, 0, 1, 0, 0);font-size: 90px;"></i></div> 
+                        </div>
+                    </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 25px;">
+        <div class="col-sm-12">
+            <div class="contact">How It Works</div>
+            <hr style="width: 100px; color: #F29C0D;border: 10px solid #F29C0D;opacity: 1;border-radius: 16px;margin-left: -15px;margin-top: -7px;">
+        </div>
+    </div>
+    <div class="row" style="margin-top: 25px;">
+        <div class="col-sm-3">
+            <div class="text-center">
+                <div><img src="../../assets/air-conditioner.png" alt=""></div>
+                <div class="top" style="margin-top: 8px;">Choose Type of AC</div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="text-center">
+                <div><img src="../../assets/customer-support.png" alt=""></div>
+                <div class="top" style="margin-top: 8px;">Choose the Service You Need</div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="text-center">
+                <div><img src="../../assets/clock-services.png" alt=""></div>
+                <div class="top" style="margin-top: 8px;">Choose your time slot</div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="text-center">
+                <div><img src="../../assets/tick (1).png" alt=""></div>
+                <div class="top" style="margin-top: 8px;">Hassle free servicing</div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-12">
+            <div class="contact">Technicians</div>
+            <hr style="width: 100px; color: #F29C0D;border: 10px solid #F29C0D;opacity: 1;border-radius: 16px;margin-left: -15px;margin-top: -7px;">
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-12">
+            <div class="technician" style="padding: 30px;">
+                <div class="row" *ngFor="let provider of service_provider; index as i">
+                    <div class="col-sm-3">
+                        <img class="images" src="../../assets/Mask Group 51.png" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="contact" style="font-size:34px;">{{provider.name}}</div>
+                        <div class="subtitle" style="font-size:24px;margin-top: 8px;">{{provider.cities}}</div>
+                        <div class="d-flex" style="justify-content: space-between;max-width: 600px;margin-top: 20px;">
+                            <div class="subtitle" style="font-size:22px;">Services:</div>
+                            <div class="subtitle" style="font-size:15px;color: black;line-height: 40px;font-weight: 600;" *ngFor="let services of (service_provider[i].service); index as j">{{services.service_name}}</div>
+                        </div>
+                        <div class="subtitle" style="font-size:24px;color: #0090FF;margin-top: 20px;">5 <span style="color: #F2B60D;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                        <div class="subtitle" style="font-size:22px;margin-top: 20px;">Review</div>
+                        <div class="d-flex" style="justify-content: space-between;max-width: 300px;margin-top: 20px;">
+                            <div class="subtitle" style="font-size:22px;font-weight: 600;">{{provider.name}}</div>
+                            <div class="subtitle" style="font-size:24px;color: black;">5 <span style="color: #F2B60D;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                        </div>
+                        <div class="d-flex" style="justify-content: space-between;margin-top: 20px;">
+                            <div  style="font-size:18px;color: black;">Great work, great guy, I will highly recommend to everyone.</div>
+                            <div class="subtitle" style="font-size:18px;color: black;">Read More Reviews</div>
+                        </div>
+                    </div>
+                    <hr style="color: #525050;width:100%;border: 1px Solid;margin-top: 20px;">
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-12">
+            <div class="contact">Customer Reviews</div>
+            <hr style="width: 100px; color: #F29C0D;border: 10px solid #F29C0D;opacity: 1;border-radius: 16px;margin-left: -15px;margin-top: -7px;">
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-12">
+            <div class="technician" style="padding: 30px;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="subtitle" style="font-size:30px;margin-top: 20px;">Latest Reviews</div>
+                        <div class="subtitle" style="font-size:24px;color: #0090FF;margin-top: 35px;"><span style="font-size: 48px;">5.0</span>/5 <span style="color: #F2B60D;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                        <div class="d-flex" style="justify-content: space-between;margin-top: 20px;">
+                            <div  style="font-size:18px;color: black;">Based On 1000 Reviews</div>
+                            <div class="subtitle" style="font-size:18px;color: black;">Read More Reviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-sm-12">
+            <div class="contact">Frequently Asked Question</div>
+            <hr style="width: 100px; color: #F29C0D;border: 10px solid #F29C0D;opacity: 1;border-radius: 16px;margin-left: -15px;margin-top: -7px;">
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;margin-bottom: 50px;">
+        <div class="col-sm-12">
+            <div class="technician" style="padding: 30px;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div *ngFor="let faqq of faqs; index as i" class="re-direct" style="padding: 15px;margin-bottom: 25px;background: #F0F0F0;">
+                            <div class="d-flex" style="justify-content: space-between;" data-bs-toggle="collapse" attr.href="#multiCollapseExample{{i}}" role="button" aria-expanded="false" attr.aria-controls="multiCollapseExample{{i}}">
+                                <div >{{faqq.faq.title}}</div>
+                                <div><i class="fa fa-caret-down"></i></div>
+                            </div>
+                            <div class="collapse multi-collapse" attr.id="multiCollapseExample{{i}}" style="margin-top: 15px;color: #525050;">
+                                {{faqq.faq.body}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="font-size: 24px;">Have some other queries <span style="font-weight: bold;">Click Here</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!------------------MOBILE VIEW---------------------->
+
+
+<div class="mobview">
+        <div class="row">
+            <div class="col">
+                <div class="banner">
+                    <div class="row">
+                        <div class="col" style="max-width: 5px;margin-left: 0px;">
+                            <div class="d-flex flex-column" style="align-items: center;width:5px;height: 30px;margin-top: 120px;opacity: 1;">
+                                <div><i class="fa fa-caret-right" style="color: white;transform: matrix(-1, 0, 0, 1, 0, 0);font-size: 25px;"></i></div> 
+                            </div>
+                        </div>
+                        <div class="col" style="margin-left: -20px;">
+                            <div class="title" style="margin-top: 50px;font-size: 18px;">AC Expert Near You</div> 
+                            <div>
+                                <ul class="subtitle" style="color: #F0F0F0;;font-size: 8px;margin-top: 20px;">
+                                    <li class="subtitle" style="margin-bottom: 30px;color: #F0F0F0;font-size: 8px;">Doorstep repair within 90 mins</li>
+                                    <li class="subtitle" style="margin-bottom: 30px;color: #F0F0F0;font-size: 8px;">Doorstep repair within 90 mins</li>
+                                    <li class="subtitle" style="color: #F0F0F0;font-size: 8px;">Doorstep repair within 90 mins</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col" style="margin-left: -50px;">
+                            <div class="d-flex" style="justify-content: end;max-width: 100%;margin-top: 30px;">
+                            <div class="pop-up" style="width: max-content;">
+                                <div *ngFor="let serv of subservices; index as i" class="re-direct" style="padding: 15px;margin-bottom: 25px;" routerLink="../payment">
+                                    <div class="d-flex" style="justify-content: space-between;">
+                                        <div class="subtitle" style="color: white;">{{serv.newService.name}}</div>
+                                        <div><i class="fa fa-caret-right"></i></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex" style="justify-content: end;"><div style="color: white;font-size: 8px;">Need Help?</div></div>
+                            
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col" style="max-width: 5px;margin-right: 0px;">
+                            <div class="d-flex" style="justify-content: end;">
+                                <div class="d-flex flex-column" style="align-items: center;height: 30px;margin-top: 120px;opacity: 1;width: 5px;">
+                                    <div><i class="fa fa-caret-left" style="color: white;transform: matrix(-1, 0, 0, 1, 0, 0);font-size: 25px;"></i></div> 
+                                </div>
+                            </div>
+                            </div>
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-sm-12">
+                <div class="contact">How It Works</div>
+                <hr style="width: 60px; color: #F29C0D;border: 5px solid #F29C0D;opacity: 1;border-radius: 16px;margin-left: -15px;margin-top: 0px;">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-sm-3">
+                <div class="text-center">
+                    <div><img src="../../assets/air-conditioner.png" alt="" style="height: 80px;width: 80px;"></div>
+                    <div class="top" style="margin-top: 8px;">Choose Type of AC</div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="text-center">
+                    <div><img src="../../assets/customer-support.png" alt="" style="height: 80px;width: 80px;"></div>
+                    <div class="top" style="margin-top: 8px;">Choose the Service You Need</div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="text-center">
+                    <div><img src="../../assets/clock-services.png" alt="" style="height: 80px;width: 80px;"></div>
+                    <div class="top" style="margin-top: 8px;">Choose your time slot</div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="text-center">
+                    <div><img src="../../assets/tick (1).png" alt="" style="height: 80px;width: 80px;"></div>
+                    <div class="top" style="margin-top: 8px;">Hassle free servicing</div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-sm-12">
+                <div class="contact">Technicians</div>
+                <hr style="width: 60px; color: #F29C0D;border: 5px solid #F29C0D;opacity: 1;border-radius: 16px;margin-left: -15px;margin-top: 0px;">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col">
+                <div class="technician" style="padding: 8px;">
+                    <div class="row" *ngFor="let provider of service_provider; index as i">
+                        <div class="col" style="width: 85px;">
+                            <div class="d-flex flex-column" style="align-items: center;margin-top: 50px;">
+                                <img class="images" src="../../assets/Mask Group 51.png" alt="" style="height: 80px;width: 80px;">
+                            </div>
+                            
+                        </div>
+                        <div class="col" style="max-width: 100%;min-width: 290px;">
+                            <div class="contact" style="font-size:18px;color: black;">{{provider.name}}</div>
+                            <div class="subtitle" style="font-size:12px;margin-top: 8px;">{{provider.cities}}</div>
+                            <div class="d-flex" style="justify-content: space-between;font-size:14px;color: #0090FF;margin-top: 20px;">
+                                <div class="subtitle" style="font-size:12px;">Services:</div>
+                                <div class="subtitle" style="font-size:10px;color: black;font-weight: 600;" *ngFor="let services of (service_provider[i].service); index as j">{{services.service_name}}</div>
+                            </div>
+                            <div class="subtitle" style="font-size:14px;color: #0090FF;margin-top: 20px;">5 <span style="color: #F2B60D;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                            <div class="subtitle" style="font-size:11px;margin-top: 20px;">Review</div>
+                            <div class="d-flex" style="justify-content: space-between;max-width: 300px;margin-top: 20px;">
+                                <div class="subtitle" style="font-size:11px;">{{provider.name}}</div>
+                                <div class="subtitle" style="font-size:12px;color: black;">5 <span style="color: #F2B60D;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                            </div>
+                            <div class="d-flex" style="justify-content: space-between;margin-top: 20px;">
+                                <div  style="font-size:9px;color: black;width: 150px;">Great work, great guy, I will highly recommend to everyone.</div>
+                                <div class="subtitle" style="font-size:9px;color: black;">Read More Reviews</div>
+                            </div>
+                        </div>
+                        <hr style="color: #525050;width:100%;border: 1px Solid;margin-top: 20px;">
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-sm-12">
+                <div class="contact">Customer Reviews</div>
+                <hr style="width: 60px; color: #F29C0D;border: 5px solid #F29C0D;opacity: 1;border-radius: 16px;margin-left: -15px;margin-top: 0px;">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-sm-12">
+                <div class="technician" style="padding: 30px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="subtitle" style="font-size:18px;margin-top: 20px;">Latest Reviews</div>
+                            <div class="subtitle" style="font-size:12px;color: #0090FF;margin-top: 35px;"><span style="font-size: 24px;">5.0</span>/5 <span style="color: #F2B60D;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                            <div class="d-flex" style="justify-content: space-between;margin-top: 20px;">
+                                <div  style="font-size:11px;color: black;">Based On 1000 Reviews</div>
+                                <div class="subtitle" style="font-size:11px;color: black;">Read More Reviews</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-sm-12">
+                <div class="contact">Frequently Asked Question</div>
+                <hr style="width: 60px; color: #F29C0D;border: 5px solid #F29C0D;opacity: 1;border-radius: 16px;margin-left: -15px;margin-top: 0px;">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px;margin-bottom: 50px;">
+            <div class="col-sm-12">
+                <div class="technician" style="padding: 30px;height: fit-content;">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div *ngFor="let faqq of faqs; index as i" class="re-direct" style="padding: 15px;margin-bottom: 25px;background: #F0F0F0;height: fit-content;font-size: 13px;">
+                                <div class="d-flex" style="justify-content: space-between;" data-bs-toggle="collapse" attr.href="#multiCollapseExample{{i}}" role="button" aria-expanded="false" attr.aria-controls="multiCollapseExample{{i}}">
+                                    <div >{{faqq.faq.title}}</div>
+                                    <div><i class="fa fa-caret-down"></i></div>
+                                </div>
+                                <div class="collapse multi-collapse" attr.id="multiCollapseExample{{i}}" style="margin-top: 15px;color: #525050;">
+                                    {{faqq.faq.body}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="font-size: 20px;">Have some other queries <span style="font-weight: bold;">Click Here</span></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
